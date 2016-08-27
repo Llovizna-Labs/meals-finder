@@ -1,0 +1,83 @@
+{
+	"liveValues": [
+		{
+			"range": {
+				"from": {
+					"line": 49,
+					"ch": 32
+				},
+				"to": {
+					"line": 49,
+					"ch": 39
+				}
+			},
+			"editWith": "colorPicker",
+			"type": "string",
+			"name": "PlaceholderTextColor",
+			"group": "TEXT INPUT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 56,
+					"ch": 30
+				},
+				"to": {
+					"line": 56,
+					"ch": 32
+				}
+			},
+			"type": "number",
+			"name": "ActiveOpacity",
+			"min": 0,
+			"max": 100,
+			"group": "TOUCHABLE HIGHLIGHT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 57,
+					"ch": 30
+				},
+				"to": {
+					"line": 57,
+					"ch": 48
+				}
+			},
+			"editWith": "colorPicker",
+			"type": "string",
+			"name": "UnderlayColor",
+			"group": "TOUCHABLE HIGHLIGHT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 63,
+					"ch": 34
+				},
+				"to": {
+					"line": 63,
+					"ch": 39
+				}
+			},
+			"type": "boolean",
+			"name": "Horizontal",
+			"group": "SCROLL VIEW"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 95,
+					"ch": 21
+				},
+				"to": {
+					"line": 95,
+					"ch": 40
+				}
+			},
+			"editWith": "colorPicker",
+			"type": "string",
+			"name": "BackgroundColor"
+		}
+	]
+}

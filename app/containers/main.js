@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { ActionCreators }  from '../actions'
-import Home from '../views/home'
+import Home from './home'
 
 class Main extends Component {
   constructor(props) {
