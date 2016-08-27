@@ -1,0 +1,70 @@
+{
+	"liveValues": [
+		{
+			"range": {
+				"from": {
+					"line": 47,
+					"ch": 27
+				},
+				"to": {
+					"line": 47,
+					"ch": 29
+				}
+			},
+			"type": "number",
+			"name": "ActiveOpacity",
+			"min": 0,
+			"max": 100,
+			"group": "TOUCHABLE HIGHLIGHT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 48,
+					"ch": 27
+				},
+				"to": {
+					"line": 48,
+					"ch": 45
+				}
+			},
+			"editWith": "colorPicker",
+			"type": "string",
+			"name": "UnderlayColor",
+			"group": "TOUCHABLE HIGHLIGHT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 53,
+					"ch": 27
+				},
+				"to": {
+					"line": 53,
+					"ch": 29
+				}
+			},
+			"type": "number",
+			"name": "ActiveOpacity",
+			"min": 0,
+			"max": 100,
+			"group": "TOUCHABLE HIGHLIGHT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 54,
+					"ch": 27
+				},
+				"to": {
+					"line": 54,
+					"ch": 45
+				}
+			},
+			"editWith": "colorPicker",
+			"type": "string",
+			"name": "UnderlayColor",
+			"group": "TOUCHABLE HIGHLIGHT"
+		}
+	]
+}
