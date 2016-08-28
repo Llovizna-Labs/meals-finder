@@ -22,23 +22,25 @@ class Home extends Component {
       searching: false
     }
   }
-  
+
   searchPressed( ) {
     this.setState({searching: true})
     this.props.fetchRecipes(this.state.text).then((res) => {
-      this.setState({searching: false})
+      console.log(res);
     }).catch((err) => {
       console.log(err)
+    }).finally(() => {
+      this.setState({searching: false})
     })
-  }  
+  }
   componentDidMount() {
     alert('home view')
   }
-  
+
   recipes () {
     return Object.keys(this.props.searchedRecipes).map(key => this.props.searchedRecipes[key])
   }
-  
+
   render() {
       return (
       <View style={styles.container}>
@@ -59,14 +61,16 @@ class Home extends Component {
                <Text>Press</Text>
              </TouchableHighlight>
       </View>
-          {!this.state.searching ? <Text> Fetched {this.props.searchedRecipes.length}</Text>: null}
-          
+
           <ScrollView horizontal={false} style={styles.scroll}>
             { !this.state.searching && this.recipes().map((recipe, key) => {
-              return ( <View key={key}> 
+              return (
+                <TouchableHighlight key={key} onPress= {() => {this.props.navigate({key: 'Detail', id: key})}}>
+                <View>
                   <Image source= { {uri: recipe.thumbnail}} style={styles.image}></Image>
                   <Text style={styles.recipeTitle}>{recipe.title}</Text>
-                </View>)
+                  </View>
+                  </TouchableHighlight>)
             })}
             {this.state.searching ? <Text> Searching...</Text>: null}
           </ScrollView>
@@ -77,10 +81,10 @@ class Home extends Component {
 
 const styles = StyleSheet.create({
   input: {
-    flex: 0.9,
+    flex: 0.7,
   },
   button: {
-    flex: 0.1
+    flex: 0.3
   },
   scroll: {
     marginTop:20,
@@ -112,11 +116,10 @@ const styles = StyleSheet.create({
 })
 
 
-
-function mapDispatchToProps(state) {
+function mapStateToProps(state) {
   return {
     searchedRecipes:  state.searchedRecipes
   }
 }
 
-export default connect(mapDispatchToProps)(Home)
+export default connect(mapStateToProps)(Home)
